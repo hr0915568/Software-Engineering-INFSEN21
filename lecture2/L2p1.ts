@@ -23,7 +23,7 @@ encode: Fun<number, Fun<List<string>, List<string>>>
 
 
 
-type List<a> = {
+export type List<a> = {
     kind: "Cons"
     head: a
     tail: List<a>
@@ -32,7 +32,7 @@ type List<a> = {
 }
 
 //constructor to create a Cons
-let cons = function<a> (value: a, t: List<a>) : List<a> {
+export let cons = function<a> (value: a, t: List<a>) : List<a> {
     return {
         kind: "Cons",
         head: value,
@@ -41,7 +41,7 @@ let cons = function<a> (value: a, t: List<a>) : List<a> {
 }
 
 //constructor to create an Empty
-let empty = function<a> () : List<a> {
+export let empty = function<a> () : List<a> {
     return {
         kind: "Empty"
     }
